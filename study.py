@@ -28,7 +28,10 @@
 # (включительно). На экран вывести True, если попадает и False - в противном случае.
 # Задача делается без использования условного оператора.
 
-float_num = 2.3
-res = (float_num >= 0 and float_num <=2) or (float_num >= 10 and float_num <=20)
-print(res)
+# float_num = 2.3
+# res = (float_num >= 0 and float_num <=2) or (float_num >= 10 and float_num <=20)
+# print(res)
 
+
+a = input('Enter your text: ')
+print(f'Строка: {a}. Длина: {len(a)}')
