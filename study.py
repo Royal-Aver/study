@@ -79,16 +79,26 @@
 # P.S. Число дней в месяцах не високосного года, начиная с января:
 # 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 
-m, n = map(int, input().split())  # 8 31
-if n == 1:
-    print(f"{str(m - 1).rjust(2, '0')}.31 {str(m).rjust(2, '0')}.0{n + 1}")
+# m, n = map(int, input().split())
+# if n == 1:
+#     print(f"{str(m - 1).rjust(2, '0')}.31 {str(m).rjust(2, '0')}.0{n + 1}")
+#
+# elif int(n) == 31 or (m == 2 and n == 28) or (m == 4 or m == 6 or m == 9 or m == 11 or n == 30):
+#     print(f"{str(m).rjust(2, '0')}.{int(n) - 1} {str(int(m) + 1).rjust(2, '0')}.01")
+#
+# else:
+#     print(f"{str(m).rjust(2, '0')}.{int(n) - 1} {str(m).rjust(2, '0')}.{int(n) + 1}")
 
-elif int(n) == 31 or (m == 2 and n == 28) or (m == 4 or m == 6 or m == 9 or m == 11 or n == 30):
-    print(f"{str(m).rjust(2, '0')}.{int(n) - 1} {str(int(m) + 1).rjust(2, '0')}.01")
 
-else:
-    print(f"{str(m).rjust(2, '0')}.{int(n) - 1} {str(m).rjust(2, '0')}.{int(n) + 1}")
+# На каждой итерации цикла вводится целое число. Необходимо подсчитать произведение только положительных чисел,
+# до тех пор, пока не будет введено значение 0. Реализовать пропуск вычислений с помощью оператора continue,
+# а также использовать цикл while.
 
-
-
+n = 1
+sum = 1
+while n != 0:
+    n = int(input())
+    if n > 0:
+        sum *= n
+print(sum)
 
