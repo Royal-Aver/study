@@ -110,9 +110,14 @@
 # а в качестве операндов - целые неотрицательные числа.
 # Следует учесть, что эти операторы могут быть записаны как с пробелами, так и без них.
 
-n = "10+25 - 12"
-sum = 0
-res = n.replace(' ', '').replace('+', '_+').replace('-', '_-').split('_')
-for el in res:
-    sum += int(el)
-print(sum)
+# n = "10+25 - 12"
+# sum = 0
+# res = n.replace(' ', '').replace('+', '_+').replace('-', '_-').split('_')
+# for el in res:
+#     sum += int(el)
+# print(sum)
+
+
+lst = [8, -11, 4, 3, 6]
+lst_n = [el ** 2 for el in lst]
+print(*lst_n)
