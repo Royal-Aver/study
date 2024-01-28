@@ -135,19 +135,47 @@
 # Требуется создать двумерный (вложенный) список размером N x N элементов, состоящий из всех единиц,
 # а затем, в последний столбец записать пятерки.
 # Вывести этот список на экран в виде таблицы чисел, как показано в примере ниже.
-n = int(input())
+# n = int(input())
+# lst = []
+# for i in range(n):
+#     lst.append([0] * n)  # создан список с вложенными списками
+#
+# for i in range(n):
+#     for j in range(n):
+#         if j != 3:
+#             lst[i][j] = 1
+#         else:
+#             lst[i][j] = 5
+#
+#     print(*lst[i])
+
+
+# n = int(input())
+# res = []
+# for number in range(2, int((n ** 0.5) + 1)):
+#     if n < 2:
+#         break
+#     if n % number == 0:
+#         break
+#     else:
+#         res.append(number)
+# print(*res)
+
+
+# Вводится натуральное число N. С помощью list comprehension сформировать двумерный список размером N x N,
+# состоящий из нулей, а по главной диагонали - единицы. (Главная диагональ - это элементы, идущие по
+# диагонали от верхнего левого угла матрицы до ее нижнего правого угла).
+N = int(input())
 lst = []
-for i in range(n):
-    lst.append([0] * n)  # создан список с вложенными списками
 
-for i in range(n):
-    for j in range(n):
-        if j != 3:
+for el in range(N):
+    lst.append([0] * N)
+
+for i, el in enumerate(lst):
+    for j, e in enumerate(el):
+        if j == i:
             lst[i][j] = 1
-        else:
-            lst[i][j] = 5
-
+for i, el in enumerate(lst):
     print(*lst[i])
-
 
 
