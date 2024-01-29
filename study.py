@@ -196,13 +196,35 @@
 # Необходимо на их основе создать словарь, затем проверить,
 # существуют ли в нем ключи со значениями: 'house', 'True' и '5' (все ключи - строки).
 # Если все они существуют, то вывести на экран ДА, иначе - НЕТ.
-lst_in = input().split()
-d = {}
-res = 'НЕТ'
-for i in lst_in:
-    k, v = i.split('=')
-    d[k] = v
-if 'house' in d and 'True' in d and '5' in d:
-    res = 'ДА'
-print(res)
+# lst_in = input().split()
+# d = {}
+# res = 'НЕТ'
+# for i in lst_in:
+#     k, v = i.split('=')
+#     d[k] = v
+# if 'house' in d and 'True' in d and '5' in d:
+#     res = 'ДА'
+# print(res)
+
+# lst = input().split()
+# d = {}
+# for i in lst:
+#     k, v = i.split('=')
+#     d[k] = v
+# if 'False' in d:
+#     del d['False']
+# if '3' in d:
+#     del d['3']
+# print(d)
+
+
+# Вводятся номера телефонов в одну строчку через пробел с разными кодами стран: +7, +6, +2, +4 и т.д.
+# Необходимо составить словарь d, где ключи - это коды +7, +6, +2 и т.п., а значения -
+# список номеров (следующих в том же порядке, что и во входной строке) с соответствующими кодами.
+lst = input().split()
+uniq = set([num[:2] for num in lst])
+d = {k: [] for k in uniq}
+for i in lst:
+    d[i[:2]].append(i)
+print(d)
 
