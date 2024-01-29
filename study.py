@@ -165,17 +165,28 @@
 # Вводится натуральное число N. С помощью list comprehension сформировать двумерный список размером N x N,
 # состоящий из нулей, а по главной диагонали - единицы. (Главная диагональ - это элементы, идущие по
 # диагонали от верхнего левого угла матрицы до ее нижнего правого угла).
-N = int(input())
-lst = []
+# N = int(input())
+# lst = []
+#
+# for el in range(N):
+#     lst.append([0] * N)
+#
+# for i, el in enumerate(lst):
+#     for j, e in enumerate(el):
+#         if j == i:
+#             lst[i][j] = 1
+# for i, el in enumerate(lst):
+#     print(*lst[i])
 
-for el in range(N):
-    lst.append([0] * N)
 
-for i, el in enumerate(lst):
-    for j, e in enumerate(el):
-        if j == i:
-            lst[i][j] = 1
-for i, el in enumerate(lst):
-    print(*lst[i])
+# На вход программе подается натуральное число n.
+# Напишите программу, выводящую графическое изображение делимости чисел от 1 до n включительно.
+# В каждой строке надо напечатать очередное число и столько символов «+», сколько делителей у этого числа.
+n = 5
 
-
+for i in range(1, n + 1):
+    count = 0
+    for j in range(1, i + 1):
+        if i % j == 0:
+            count += 1
+    print(f"{i}{'+' * count}")
